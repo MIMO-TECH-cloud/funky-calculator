@@ -1,0 +1,91 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Fun font! */
+    background: linear-gradient(135deg, #fce4ec, #e1bee7); /* Soft pink to light purple */
+    color: #4a148c; /* Dark purple for text */
+}
+
+.calculator {
+    background-color: #f8bbd0; /* Medium pink background for calc */
+    padding: 20px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: 3px solid #e91e63; /* Hot pink border */
+    overflow: hidden; /* Ensures shadow/border on elements within are contained */
+}
+
+.display {
+    background-color: #fff8e1; /* Creamy yellow display */
+    color: #d81b60; /* Deep pink text for display */
+    font-size: 3em;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    text-align: right;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.btn {
+    width: 70px; /* Standard button size */
+    height: 70px;
+    border: none;
+    border-radius: 50%; /* Round buttons for fun! */
+    font-size: 1.8em;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    font-weight: bold;
+    color: #4a148c; /* Dark purple text for buttons */
+    background-color: #f06292; /* Light pink-purple for general buttons */
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+.btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn.number {
+    background-color: #ffcdd2; /* Lighter pink for numbers */
+}
+
+.btn.operator {
+    background-color: #ce93d8; /* Light purple for operators */
+    color: #880e4f; /* Darker pink for operator symbols */
+}
+
+.btn.clear {
+    background-color: #ff8a65; /* Orange-pink for clear */
+    color: #fbe9e7; /* Off-white text */
+}
+
+.btn.equals {
+    background-color: #a7ffeb; /* Mint green for equals */
+    color: #004d40; /* Dark green for equals symbol */
+    grid-column: span 2; /* Span two columns */
+    border-radius: 35px; /* Make it an oval */
+    width: auto; /* Allow auto-width for span */
+}
+
+/* Adjustments for a more compact layout if needed */
+.zero {
+    grid-column: span 2;
+    border-radius: 35px;
+    width: auto;
+}
